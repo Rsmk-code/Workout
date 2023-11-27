@@ -22,14 +22,12 @@ const WorkoutForm = () => {
 
         if(!response.ok) {
             setError(json.error)
-            console.log(json.error)
         }
         if(response.ok) {
             setTitle('')
             setLoad('')
             setReps('')
             setError(null)
-            console.log('new workout added', json)
         }
     }
     
