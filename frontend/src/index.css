@@ -38,11 +38,12 @@ header a {
 
 /* Homepage */
 .home {
-  display: grid;
-  grid-template-columns: 3fr;
+  display: flex;
   gap: 100px;
 }
-
+.workouts {
+  flex: 1;
+}
 .workout-details {
   background: #fff;
   border-radius: 4px;
@@ -76,6 +77,9 @@ header a {
 }
 
 /* new workout form */
+form {
+  flex: 1;
+}
 label, input {
   display: block;
 }
@@ -108,3 +112,13 @@ div.error {
   border-radius: 4px;
   margin: 20px 0;
 } 
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+}
