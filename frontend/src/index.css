@@ -42,7 +42,7 @@ header a {
   gap: 100px;
 }
 .workouts {
-  flex: 2;
+  flex: 1;
 }
 .workout-details {
   background: #fff;
