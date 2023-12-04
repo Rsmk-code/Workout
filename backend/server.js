@@ -7,8 +7,17 @@ const userRoutes = require('./routes/user')
 const PORT = process.env.PORT || 5000;
 const MONGO_URL = process.env.MONGO_URL;
 // middleware
-app.use(express.json());
 
+app.use(cors(
+    {
+        origin: 'https://deploy-mern-1whq.vercel.app',
+        methods: ["POST", "GET"],
+        credentials: true,
+    }
+))
+
+    app.use(express.json());
+    
 //routes
 app.use('/api/workouts',workoutRoutes);
 
